@@ -1,9 +1,12 @@
 {
+  "homepage":"http://viniciusbrunheroto.github.io/Trilha-Ignite-Projeto-04",
   "name": "pizzashop-web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "dev:test": "vite --port 50789 --mode test",
     "build": "tsc && vite build",
@@ -54,6 +57,7 @@
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "gh-pages": "^6.1.1",
     "happy-dom": "^14.3.9",
     "msw": "^2.2.13",
     "postcss": "^8.4.33",
