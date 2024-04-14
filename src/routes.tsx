@@ -9,26 +9,29 @@ import { SignIn } from './pages/auth/sign-in'
 import { SignUp } from './pages/auth/sign-up'
 import { Error } from './pages/error'
 
-export const router = createBrowserRouter([
-  {
-    path: '/Trilha-Ignite-Projeto-04/',
-    element: <AppLayout />,
-    errorElement: <Error />,
-    children: [
-      { path: '/Trilha-Ignite-Projeto-04/', element: <Dashboard /> },
-      { path: '/Trilha-Ignite-Projeto-04/orders', element: <Orders /> },
-    ],
-  },
-  {
-    path: '/Trilha-Ignite-Projeto-04/',
-    element: <AuthLayout />,
-    children: [
-      { path: '/Trilha-Ignite-Projeto-04/sign-in', element: <SignIn /> },
-      { path: '/Trilha-Ignite-Projeto-04/sign-up', element: <SignUp /> },
-    ],
-  },
-  {
-    path: '*',
-    element: <NotFound />,
-  },
-])
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <AppLayout />,
+      errorElement: <Error />,
+      children: [
+        { path: '/', element: <Dashboard /> },
+        { path: '/orders', element: <Orders /> },
+      ],
+    },
+    {
+      path: '/',
+      element: <AuthLayout />,
+      children: [
+        { path: '/sign-in', element: <SignIn /> },
+        { path: '/sign-up', element: <SignUp /> },
+      ],
+    },
+    {
+      path: '*',
+      element: <NotFound />,
+    },
+  ],
+  { basename: '/Trilha-Ignite-Projeto-04/' },
+)
