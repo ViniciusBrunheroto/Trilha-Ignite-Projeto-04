@@ -14,11 +14,11 @@ export function Header() {
         <Separator orientation="vertical" className="h-6" />
 
         <nav className="flex items-center space-x-4 lg:space-x-6">
-          <NavLink to="/">
+          <NavLink to="/Trilha-Ignite-Projeto-04/">
             <Home className="h-4 w-4" />
             Início
           </NavLink>
-          <NavLink to="/orders">
+          <NavLink to="/Trilha-Ignite-Projeto-04/orders">
             <UtensilsCrossed className="h-4 w-4" />
             Pedidos
           </NavLink>

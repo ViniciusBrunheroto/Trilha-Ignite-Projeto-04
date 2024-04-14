@@ -7,6 +7,7 @@ import type { InlineConfig } from 'vitest'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/Trilha-Ignite-Projeto-04/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
